@@ -59,7 +59,7 @@
  
 
         .card {
-            background-color: #fafafa;
+            background-color: #fbfbfb;
             border: 1px solid white;
             height: 70%;
             width: 60%;
@@ -73,7 +73,7 @@
         .social-icons {
             display: flex;
             text-align: center;
-            margin-top:0px;
+            margin-top:-50px;
             margin-right: 600px;
 
         }
@@ -100,7 +100,7 @@
         .button-container{
             display: flex;
             justify-content: flex;
-            margin-top: 20px;
+            margin-top: 40px;
         }
         .button {
             text-align: center;
@@ -128,25 +128,19 @@
         }
 
         .table {
-            margin-top: 20px;
+         display: end;
+         align-items: center;
+         justify-content: end;
+         margin-top: -400px;
+         margin-left: 60%;
+         background-color:#f8f5f5;
         }
 
         .img {
-            border-radius: 5px;
-            height: 70%;
-            width: 30%;
-            margin: -370px;
-            float: left; 
-            margin-left: 500px;
+          height: 330px;
+          width: 300px;
         }
              
-        .table tr {
-            border: 1px solid white; 
-        }
-        .td {
-            text-align: left;
-            margin-top: -40px;
-        }
     </style>
 </head>
 <body class="body">
@@ -184,17 +178,21 @@
             <i class="fab fa-facebook"></i>
             <i class="fab fa-twitter"></i>
         </div>
-       <div class="table">
-            <tr class="tr">
-                <th>
-                    <img src="images.jpg    " align="right" class="img">
-                </th>
-                <td class="td">
-                <h1 style="font-size: 30px; margin-top:-80px; margin-left : 460px;">Rhoma irama</h1>
-                <h2 style="font-size: 15px; margin-top:-15px; margin-left : 450px;">Fullstack Developer</h2></td>
+       <div>
+          <table class="table" >
+            <tr>
+              <th>
+                <img class="img" src="foto.jpg" alt="fotoprofile">
+              </th>
             </tr>
-        </div>
-    </div>
+            <tr>
+            <td style="font-size: 30px;display: flex;justify-content: center; ">Rizki</td>
+          </tr>
+          <tr>
+            <td style="font-size: 12px;display: flex;justify-content: center;"> Fullstack Developer</td>
+          </tr>
+          </table>
+       </div>
 </body>
 </html>
 
