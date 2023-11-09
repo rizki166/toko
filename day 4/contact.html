@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Contact me</title>
+        <link rel="stylesheet" href="contact.css">
+    </head>
+    <body>
+       <div class="navbar">
+         <img src="dumbways logo.jpg" alt="dumbways" class="img">
+         <ul class="ul">
+            <li class="li">
+                <a href="index.html" >Home</a>
+            </li>
+            <li class="li">My Project</li>
+            <button class="button">Contact Me</button>
+              
+         </ul>
+
+       </div>
+       <form>
+        <div class="navigator">
+            <div class="container">
+                <h1 class="h1">GET IN TOUCH</h1>
+             <label class="text-label">Name</label>
+            <input type="text" id="inputName" class="input" />
+            <label class="text-label">Email</label>
+            <input type="text"  id="inputEmail" class ="input"/>
+            <label class="text-label" >Phone Number</label>
+            <input type="text" id ="inputphone" class="input"/>
+            <label class="text-label" class="input">Subject</label>
+            <div class = "select">
+                <select  id="inputSubject" style="width: 400; height: 35; border-radius: 7px; ">
+                <option></option>
+                <option>Frontend Developer</option>
+                <option>Beckend Developer</option>
+                <option> Fullstack Developer</option>
+            </select>
+            </div>
+            <label style="font-weight: bold;">Your Message</label>
+            <textarea id="message" class="text-area"></textarea>
+            <input type ="button" value="submit" class ="submit" onclick="submitData()"/>
+            </div>
+            </div>
+        </form>
+
+            <script src="contact.js"></script>
+    </body>
+</html>
