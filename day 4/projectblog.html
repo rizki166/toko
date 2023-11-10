@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        }
+        .container-blog {
+            display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        min-height: 100vh; 
+        }
+        .navigator-blog {
+            display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 60%;
+        max-width: 1000px;
+        min-height: 100vh; 
+        margin-top: 20px
+        }
+        .blog-post {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            height: 30%;
+            width: 300px;
+            background-color: #ffffff;
+        }
+        .blog-post img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+    
+        }
+        .h1 {
+            font-size: 20px;
+        }
+        .text {
+         font-size: 14px;
+     
+        }
+        .social-blog {
+            display: flex;
+            gap: 20px;
+        }
+        .buttons {
+            display: flex;
+            margin-top: 20px;
+        }
+        .buttons button {
+            margin-right: 5px;
+            width: 1000px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: #111727;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="asset/dumbways logo.jpg" alt="dumbways" class="img">
+        <ul class="ul">
+            <li class="li">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="li">
+                <a>My Project</a>
+            </li>
+            <li class="li">
+                <button class="button"><a href="contact.html">Contact Me</a></button>
+            </li>
+        </ul>
+    </div>
+    <div class="navigator">
+        <form style="flex-direction: column;">
+        <div class="container">
+            <h1 class="h1">ADD MY PROJECT</h1>
+            <label class="text-label">Project name</label>
+            <input type="text" id="inputName" class="input" />
+            <div class="container_date">
+                <section>
+                    <label class="text-label">Start Date</label>
+                    <input type="text"  id="inputEmail" class="input-start"/>
+                </section>
+                <section>
+                    <label class="text-label" >End Date</label>
+                    <input type="text" id="inputphone" class="input-end"/>
+                </section>
+            </div>
+            
+            <div>
+                <label style="font-weight: bold;">Description</label>
+                <textarea id="message" class="text-area"></textarea>
+            </div>
+            <div>
+                <div class="container-checkbox">
+                    <label class="text-label">Technologies</label>
+                    <div class="checkbox">
+                        <input type="checkbox" id="inputNodejs" style="margin-top: 15px; border-radius: 15px;">
+                        <label class="text-checkbox">Node Js</label>
+                        <input type="checkbox" id="inputNextJs" style="margin-left: 40px;">
+                        <label  class="text-checkbox">Next Js</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="inputReactjs" style="margin-bottom: 20px;">
+                        <label class="text-checkbox">React Js</label>
+                        <input type="checkbox" id="inputTypescript" style="margin-left: 38px;">
+                        <label class="text-checkbox">TypeScript</label>
+                    </div>
+                    <div class="input-blog-image-group">
+                        <label for="inputImage" class="custom-file-upload">
+                            <p class="text-label">Choose Image</p>
+                            <img src="assets/icon/file.png" alt="file" />
+                        </label>
+                        <input style="background-color: white;" type="file" id="inputImage" class="input-file"  onchange="displayImage(event)" />
+                        <div id="preview"></div>
+                    </div>
+                    <div class="button-group">
+                        <input type="button" value="Submit" class="submit" onclick="submitData()" />
+                    </div>
+                </div>
+            </div>
+            <h1>MY PROJECT</h1>
+            
+        </div>
+    </div>
+    <h1 style="display: flex; justify-content: center;">MY PROJECT</h1>>
+    <div class="container-blog">
+        <div class="navigator-blog">
+            <div class="blog-post">
+                <img src="asset/fotoblog.jpg" alt=" Logo 1">
+                <h1 class="h1"> Mobile App - 2021</h1>
+                <p class="text">Durasi: 3 bulan</p>
+                <p>App that used for  student, it was deployed and can be downloaded on playstore. Happy download</p>
+                <div class="icons-blog">
+                    <i class="fa-brands fa-android fa-xl"></i>
+                    <i class="fa-brands fa-google-play fa-xl"></i>
+                    <i class="fa-brands fa-java fa-lg"></i>
+                </div>
+                <div class="buttons-blog">
+                    <button>edit</button>
+                    <button>delete</button>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="asset/fotoblog.jpg" alt=" Logo 2">
+                <h1 class="h1"> Mobile App - 2021</h1>
+                <p class="text">Durasi: 3 bulan</p>
+                <p>App that used for  student, it was deployed and can be downloaded on playstore. Happy download</p>
+                <div class="icons-blog">
+                    <i class="fa-brands fa-android fa-xl"></i>
+                    <i class="fa-brands fa-google-play fa-xl"></i>
+                    <i class="fa-brands fa-java fa-lg"></i>
+                </div>
+                <div class="buttons-blog">
+                    <button>edit</button>
+                    <button>delete</button>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="asset/fotoblog.jpg" alt=" Logo 3">
+                <h1 class="h1">Dumbways Mobile App - 2021</h1>
+                <p class="text">Durasi: 3 bulan</p>
+                <p>App that used for dumbways student, it was deployed and can be downloaded on playstore. Happy download</p>
+                <div class="social-icons-blog">
+                    <i class="fa-brands fa-android fa-xl"></i>
+                    <i class="fa-brands fa-google-play fa-xl"></i>
+                    <i class="fa-brands fa-java fa-lg"></i>
+                </div>
+                <div class="buttons-blog">
+                    <button>edit</button>
+                    <button>delete</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigator-blog">
+            <div class="blog-post">
+                <img src="asset/fotoblog.jpg" alt="Logo 4">
+                <h1 class="h1"> Mobile App - 2021</h1>
+                <p class="text">Durasi: 3 bulan</p>
+                <p>App that used for student, it was deployed and can be downloaded on playstore. Happy download</p>
+                <div class="icons-blog">
+                    <i class="fa-brands fa-android fa-xl"></i>
+                    <i class="fa-brands fa-google-play fa-xl"></i>
+                    <i class="fa-brands fa-java fa-lg"></i>
+                </div>
+                <div class="buttons">
+                    <button>edit</button>
+                    <button>delete</button>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="asset/fotoblog.jpg" alt="Logo 5">
+                <h1 class="h1"> Mobile App - 2021</h1>
+                <p class="text">Durasi: 3 bulan</p>
+                <p>App that used for  student, it was deployed and can be downloaded on playstore. Happy download</p>
+                <div class="icons-blog">
+                    <i class="fa-brands fa-android fa-xl"></i>
+                    <i class="fa-brands fa-google-play fa-xl"></i>
+                    <i class="fa-brands fa-java fa-lg"></i>
+                </div>
+                <div class="buttons-blog">
+                    <button>edit</button>
+                    <button>delete</button>
+                </div>
+            </div>
+        </div>
+    </form> 
+    </div>
+</body>
+</html>
