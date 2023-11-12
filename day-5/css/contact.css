@@ -5,7 +5,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    
 }
 
 .navbar {
@@ -66,8 +65,8 @@ body {
     display: flex;
     flex-direction: column;
     margin-right: 70px;
-    margin-top: 45px;
-    gap : 10px; 
+    margin-top: 30px;
+    gap : 5px; 
     width: 300px;;
 }
 .h1 {
@@ -82,46 +81,21 @@ body {
 
 .text-label {
     font-weight: bold;
-    min-width: none;
+    min-width: none
 }
 
 .input {
-    display:flex ;
     width: 400px;
     height: 35px;
     margin-top: 10px;
     border-radius: 5px;
     border-color: white;
 }
-
-.input-start {
-    width: 185px;
-    height: 35px;
-    border-radius: 3px;
-}
-
-.input-end {
-    width: 185px;
-    height: 35px;
-    border-radius: 3px;
-}
-
 .text-area {
     width: 400px;
-    height: 100px;
+    height: 80px;
     border-radius: 7px;
     color: black;
-}
-.date-label {
-  gap: 5px;
-    
-   
-}
-
-.text-checkbox {
-    font-size:14px;
-    font-weight: bold;
-    color: #514a4a;
 }
 
 .submit {
@@ -129,13 +103,65 @@ body {
     color: white;
     width: 100px;
     height: 30px;
-    margin-left: 270px;
+    margin-left: auto;
     margin-top: 20px;
-    margin-right: 70px;
+    margin-right: -70px;
     border-radius: 20px;
-}.container_date{
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+.container-blog {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-left: 100px;
-     gap:30px
-    }
+}
+.navigator-blog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 60%;
+    max-width: 1000px;
+}
+.blog-post {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    height: 30%;
+    width: 300px;
+    background-color: #ffffff;
+}
+.blog-post img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+}
+.h1 {
+    font-size: 20px;
+}
+.text {
+ font-size: 14px;
+
+}
+.social-blog {
+    display: flex;
+    gap: 20px;
+}
+.buttons-blog {
+    display: flex;
+    margin-top: 20px;
+}
+.buttons button {
+    margin-right: 5px;
+    width: 1000px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #111727;
+    color: white;
+    font-size: 20px;
+}
