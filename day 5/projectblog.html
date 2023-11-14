@@ -10,23 +10,38 @@
     <link rel="stylesheet" href="css/blog.css">
 </head>
 
-<body>
-    <div class="navbar">
-        <img src="assets/dumbways logo.jpg" alt="dumbways" class="img">
-        <ul class="ul">
-            <li class="li">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="li">
-                <a>My Project</a>
-            </li>
-            <li class="li">
-                <button class="button"><a href="contact.html">Contact Me</a></button>
-            </li>
-            <li>
-                <a href="blogproject.html"></a>
-            </li>
-        </ul>
+<body style="background-color:#e3e7eb;">
+    <nav  class="nav">
+        <div style="display: flex; align-items: center; height: 100%; margin-left: 30px; margin-right: 30px;">
+            <ul style="display: flex; list-style-type: none; gap: 50px; align-items: center;">
+                <li>
+                    <img src="assets/dumbways logo.jpg" style="height: 35px;" />
+                </li>
+                <li class="nav-link nav-collapse">
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-link nav-collapse">
+                    <a href="projectblog.html">
+                        Myproject
+                    </a>
+                </li>
+                <li class="nav-link nav-collapse">
+                     <a href="testimonial.html">Testimonial</a>
+                </li>
+            </ul>
+            <div style="display: flex; width: 100%; justify-content: end;">
+                <a href="contact.html" class="btn-contact nav-collapse">Contact me</a>
+                <i class="fa-solid fa-bars fa-2x" style="cursor: pointer;" id="hamburger-button" onclick="openHamburger()"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="index.html" class="active"><i class="fa fa-home" aria-hidden="true" style="margin: 5px;"></i>Home</a>
+        <a href="projectblog.html"><i class="fa-brands fa-blogger-b"style="margin:5px"></i>Myproject</a>
+        <a href="contact.html"><i class="fa fa-address-book" aria-hidden="true" style="margin: 5px;"></i>Contact Me</a>
+        <a href="testimonial.html"><i class="fa-brands fa-rocketchat" style="margin:5px" ></i>Testimoni</a>
     </div>
     <div class="container-contact">
         <div class="navigator">
@@ -196,7 +211,8 @@
         </div>
     </div>
 
-    <script src="blog.js"></script>
+    <script src="JS/blog.js"></script>
+    <script src="JS/navbar.js"></script>
 </body>
 
 </html>
