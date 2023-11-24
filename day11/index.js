@@ -8,54 +8,36 @@ app.set("views", path.join(__dirname, 'src/views'));
 
 const assetsPath = path.join(__dirname, 'src/assets');
 app.use("/assets", express.static(assetsPath));
-app.use(express.urlencoded({ extended: true }));
-
-let projects = [];
+app.use(express.urlencoded({ extended: true })); // Menambahkan middleware untuk meng-handle form data
 
 app.get('/', home);
 app.get('/project-blog', projectBlog);
 app.post('/project-blog', addProjectBlog);
 app.get('/testimonial', testimonial);
 app.get('/contact', contact);
-app.get('/blogproject/:id', blogProject);
-
-function addProjectBlog(req, res) {
-  const newProject = {
-    id: projects.length + 1,
-    name: req.body.title,
-    content: req.body.description,
-    startDate: req.body.startDate,
-    endDate: req.body.endDate,
-    technologies: req.body.technologies,
-    icon: req.body.icon,
-    duration: calculateDuration(req.body.startDate, req.body.endDate),
-  };
-
-  projects.push(newProject);
-
-  console.log("Proyek Baru:", newProject);
-
-  
-  res.render('index', { projects });
-}
-
-
-function calculateDuration(startDate, endDate) {
-i
-  const start = new Date(startDate);
-  const end = new Date(endDate);
-  const diffTime = Math.abs(end - start);
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  return `${diffDays} hari`;
-}
 
 function home(req, res) {
-  
-  res.render('index', { projects });
+  res.render('index');
 }
 
 function projectBlog(req, res) {
   res.render('projectblog');
+}
+
+function addProjectBlog(req, res) {
+  const title = req.body.title;
+  const startDate = req.body.startDate;
+  const endDate = req.body.endDate;
+  const description = req.body.description;
+  const technologies = req.body.technologies;
+
+  console.log("title:", title);
+  console.log("Start Date:", startDate);
+  console.log("End Date:", endDate);
+  console.log("description:", description);
+  console.log("technologies", technologies)
+
+  res.redirect('/project-blog');
 }
 
 function testimonial(req, res) {
@@ -64,18 +46,6 @@ function testimonial(req, res) {
 
 function contact(req, res) {
   res.render('contact');
-}
-
-function blogProject(req, res) {
-  const projectId = parseInt(req.params.id);
-  const project = projects.find(p => p.id === projectId);
-
-  if (!project) {
-    res.status(404).send('Proyek tidak ditemukan');
-    return;
-  }
-
-  res.render('blogProject', { project });
 }
 
 app.listen(port, () => {
