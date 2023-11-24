@@ -1,0 +1,49 @@
+const express = require('express')
+const app = express()
+const port = 5000
+
+app.get('/', home)
+app.get('/about', about)
+app.get('/testimonialss', testimonials)
+
+function testimonials(req, res) {
+    res.json([
+        {
+            author: 1123213,
+            content: "Keren banget jasanya! Top notch!",
+            image: "https://images.pexels.com/photos/3754285/pexels-photo-3754285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            rating: 5
+        },
+        {
+            author: "Novri",
+            content: "Keren banget!",
+            image: "https://images.pexels.com/photos/3754285/pexels-photo-3754285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            rating: 5
+        },
+        {
+            author: "Denis",
+            content: "Apasih bang!",
+            image: "https://images.pexels.com/photos/3468827/pexels-photo-3468827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            rating: 1
+        },
+        {
+            author: "Febry",
+            content: "Oke deh!",
+            image: "https://images.pexels.com/photos/3468827/pexels-photo-3468827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            rating: 4
+        }
+    ])
+}
+
+function home(req, res) {
+  res.send('Hello world')
+}
+function about  (req, res)  {
+  res.send('This is my home')
+}
+function testimonials  (req, res) {
+  res.send('this is testimonial')
+}
+app.listen(port, () => {
+    console.log(`Server berjalan di port ${port}`)
+})

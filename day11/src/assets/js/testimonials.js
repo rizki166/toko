@@ -130,11 +130,11 @@ async function fetchData(url) {
 }
 
 function generateTestimonialHTML(item, additionalInfoCallback) {
-  let html = `<div class="testimonial">
-    <img src="${item.image}" class="profile-testimonial" />
-    <p class="quote">"${item.content}"</p>
-    <p class="author">- ${item.author}</p>
-    <p class="author">${item.rating} <i class="fa-solid fa-star"></i></p>`;
+  let html = `<div class="testimonial col-12 "style="width:30%; height:30%;" >
+  <img src="${item.image}" class="profile-testimonial" />
+  <p class="quote">"${item.content}"</p>
+  <p class="author">- ${item.author}</p>
+  <p class="author">${item.rating} <i class="fa-solid fa-star"></i></p>`;
 
   if (additionalInfoCallback) {
     html += additionalInfoCallback(item);
@@ -183,6 +183,6 @@ async function filterTestimonials(rating, additionalInfoCallback) {
 async function additionalInfo(item) {
   return `<p class="additional-info">High Rating Testimonial</p>`;
 }
-cd 
+
 
 allTestimonials();
